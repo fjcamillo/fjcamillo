@@ -1,5 +1,5 @@
 from app import app
 
 @app.route('/dev')
-def graphics():
-    return ''
+def dev():
+    return 'dev'

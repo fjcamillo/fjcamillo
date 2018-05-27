@@ -1,5 +1,5 @@
 from app import app
 
 @app.route('/data')
-def graphics():
-    return ''
+def data():
+    return 'data'
