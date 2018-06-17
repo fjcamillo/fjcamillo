@@ -5,8 +5,8 @@ services:
     image: postgres
   web:
     build: .
-    command: python3 /fjcamillo/manage.py runserver 0.0.0.0:8000
+    command: python fjcamillo/run.py
     ports:
-      - "8000:8000"
+      - "5000:5000"
     depends_on:
       - db

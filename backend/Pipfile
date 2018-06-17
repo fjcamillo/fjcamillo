@@ -7,8 +7,8 @@ name = "pypi"
 
 [packages]
 
-Django = "*"
-"psycopg2" = "*"
+flask = "*"
+request = "*"
 
 
 [dev-packages]
