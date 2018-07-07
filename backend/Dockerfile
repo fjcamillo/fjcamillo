@@ -3,6 +3,6 @@ FROM python:3
 WORKDIR app
 COPY . .
 RUN pip install --upgrade pip && pip install pipenv
-RUN pipenv install
+RUN pipenv install --system --deploy
 # RUN pip install -r /app/requirements.txt
-# CMD pipenv run python /app/run.py
+CMD ["python", "run.py"]
