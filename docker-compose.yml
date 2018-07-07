@@ -3,8 +3,10 @@ version: '3'
 services:
   db: 
     image: postgres
-  web:
-    build: .
+  backend:
+    build: 
+      context: ./
+      dockerfile: ./backend/Dockerfile
     command: python fjcamillo/run.py
     ports:
       - "5000:5000"
