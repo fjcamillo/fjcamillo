@@ -6,7 +6,7 @@ services:
   backend:
     build: 
       context: ./
-      dockerfile: ./backend/dev.Dockerfile
+      dockerfile: ../backend/dev.Dockerfile
     command: pipenv run python /app/run.py --host=0.0.0.0
     ports:
       - "5000:5000"
@@ -14,4 +14,4 @@ services:
       - db
     restart: always
     volumes:
-      - ./backend/:/app
+      - ../backend/:/app
