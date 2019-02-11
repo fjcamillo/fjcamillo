@@ -1,0 +1,16 @@
+version: '2'
+services:
+  dev-backend:
+    build:
+      context: ${PWD}/../backend/
+      dockerfile: ${PWD}/../backend/dev.Dockerfile
+    restart: always
+    environment:
+      - "VIRTUAL_HOST=dev-iot.fjcamillo.com"
+    ports:
+      - "5000:5000"
+    command: "pipenv run python /app/run.py --host=0.0.0.0"
+    networks: 
+      - fjcamillo
+networks:
+  fjcamillo:
