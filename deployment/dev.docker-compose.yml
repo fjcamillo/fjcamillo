@@ -1,8 +1,13 @@
-version: 2
+version: '2'
 services:
   nginx:
-    images: 'jwilder/nginx-proxy'
-  # design-blog:
-  dev-blog:
-  # iot-blog:
-  # workflow:
+    image: 'jwilder/nginx-proxy'
+    restart: always
+    networks:
+      - fjcamillo
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+networks:
+  fjcamillo:
